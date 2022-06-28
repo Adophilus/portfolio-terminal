@@ -121,6 +121,24 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+.show-later {
+  animation-name: show-later-anim;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes show-later-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes brighten-up-red {
   0% {
     color: var(--color-text-default);
