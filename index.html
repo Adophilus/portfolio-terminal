@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio | Uchenna Ofoma</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div
+      id="app"
+      x-data="state"
+      class="w-full h-100 flex justify-center align-center"
+    >
+      <template x-if="$store.loaded.state">
+        <section class="h-full w-full fixed md:static md:container md:h-auto">
+          <div
+            id="terminal"
+            @click="document.querySelector('#commandEntry').focus()"
+            x-init="$watch('$store.terminal.stdin', $store.terminal.formatPrompt)"
+            class="md:rounded-1 flex-col bg-secondary h-100 md:h-50"
+          >
+            <div
+              class="title-bar hidden md:flex justify-space-between select-none bg-dark-grey py-1/2 px-1"
+            >
+              <div class="flex justify-center align-center">
+                <img
+                  src="imgs/profile.jpg"
+                  style="width: 1.1em; height: 1.1em"
+                />
+              </div>
+              <div>
+                <a
+                  href="./"
+                  class="app-title text-grey font-500 decoration-none cursor-pointer font-ubuntu-bold"
+                  x-text="$store.terminal.title"
+                ></a>
+              </div>
+              <div class="flex gap-x-1">
+                <span
+                  class="terminal-btn align-center justify-center bg-green"
+                ></span>
+                <span
+                  class="terminal-btn align-center justify-center bg-yellow"
+                ></span>
+                <span
+                  class="terminal-btn align-center justify-center bg-red"
+                  @click="$store.terminal.executeCommand('exit')"
+                ></span>
+              </div>
+            </div>
+            <div
+              id="scrollbar"
+              class="text-light-grey font-500 font-ubuntu-mono overflow-auto"
+            >
+              <div class="mx-1/2 relative" id="commandSpace">
+                <div>
+                  <!-- command output -->
+                  <div id="commandOutput"></div>
+                  <!-- command prompt -->
+                  <div class="flex flex-col mt-1">
+                    <span
+                      class="path text-purple"
+                      x-text="$store.terminal.pwd"
+                    ></span>
+                    <span class="flex" style="height: 1em">
+                      <i
+                        class="fa-solid fa-chevron-right mr-1/2 text-green"
+                      ></i>
+                      <span
+                        x-html="$store.terminal._prompt"
+                        x-init="$nextTick(() => { $store.terminal.writeCommand('help', () => {
+                          const commandEntry = document.querySelector('#commandEntry')
+                          commandEntry.disabled = false
+                          commandEntry.focus()
+                        }) })"
+                      ></span>
+                      <span id="commandCaret"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="w-full flex justify-center bottom-0 absolute md:hidden justify-center pb-1 text-normal font-500 font-ubuntu-bold"
+            >
+              <span id="credits" class="flex animate">
+                <span>Made with <i class="fa-solid fa-heart"></i> by</span
+                >&nbsp;
+                <a
+                  :href="$store.db.socials.GitHub.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex flex-col decoration-none text-default"
+                  ><span id="author">Uchenna</span
+                  ><span class="flex" id="underlineContainer"
+                    ><span
+                      class="bg-primary w-full h-2"
+                      id="underline"
+                    ></span></span></a
+              ></span>
+            </div>
+          </div>
+          <div
+            class="hidden md:flex justify-center mt-3 text-normal font-500 font-ubuntu-bold"
+          >
+            <span id="credits" class="flex text-light-grey">
+              <span>Made with <i class="fa-solid fa-heart"></i> by</span>&nbsp;
+              <a
+                :href="$store.db.socials.GitHub.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-col decoration-none text-light-grey"
+                ><span id="author">Uchenna</span
+                ><span class="flex" id="underlineContainer"
+                  ><span
+                    class="bg-light-grey w-full h-2"
+                    id="underline"
+                  ></span></span></a
+            ></span>
+          </div>
+          <div class="opacity-0 absolute">
+            <input
+              class="select-none cursor-default"
+              id="commandEntry"
+              disabled
+              type="text"
+              @focus="document.querySelector('#commandCaret').classList.add('animate-caret')"
+              @focusOut="document.querySelector('#commandCaret').classList.remove('animate-caret')"
+              @keypress="$store.terminal.onKeyPress($event)"
+              @keyup="$store.terminal.moveCaret($event)"
+              x-model="$store.terminal.stdin"
+              onselectstart="return false"
+            />
+          </div>
+        </section>
+      </template>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

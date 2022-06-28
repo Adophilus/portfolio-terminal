@@ -1,0 +1,15 @@
+<div>
+  <template x-for="social in $store.db.socials">
+    <div>
+      <i :class="social.icon"></i>
+      <span x-text="social.name"></span>:
+      <a
+        class="text-light-grey"
+        :href="social.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        x-text="social.text"
+      ></a>
+    </div>
+  </template>
+</div>

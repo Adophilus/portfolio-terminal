@@ -1,0 +1,50 @@
+<div class="flex flex-col gap-x-1">
+  <header>
+    <h3 class="underline">
+      Hello There <i class="fa-solid fa-hand-wave"></i>! I'm Uche
+    </h3>
+  </header>
+  <p>
+    I am a solution oriented Full Stack developer, lifelong learner and chess
+    player with a professional background in backend development. I enjoy
+    development because of the satisfaction I get by overcoming challenges. I am
+    motivated by the opportunity that software provides to positively impact the
+    life of an individual and the world as a whole
+    <i class="fa-solid fa-face-grin-wide"></i>.
+  </p>
+  <p>
+    When I'm not working you can find me
+    <a
+      class="text-light-grey"
+      target="_blank"
+      :href="$store.db.socials.Chess"
+      rel="noopener noreferrer"
+    >
+      playing chess</a
+    >,
+    <a
+      class="text-light-grey"
+      target="_blank"
+      :href="$store.db.socials.Twitter"
+      rel="noopener noreferrer"
+      >posting tweets</a
+    >
+    or
+    <a
+      class="text-light-grey"
+      target="_blank"
+      :href="$store.db.socials.StackOverflow"
+      rel="noopener noreferrer"
+      >helping others out on StackOverflow</a
+    >.
+  </p>
+  <p>
+    Interested in what I've got to offer? Feel free to reach out to me on any of
+    my
+    <span
+      class="underline cursor-pointer"
+      x-on:click="$store.terminal.executeCommand('cat socials')"
+      >social handles</span
+    >
+  </p>
+</div>

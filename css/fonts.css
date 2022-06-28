@@ -1,0 +1,64 @@
+@font-face {
+  font-family: fira-code;
+  src: url('../fonts/FiraCode/FiraCode-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: lora;
+  src: url('../fonts/Lora/Lora-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: ubuntu-regular;
+  src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: ubuntu-medium;
+  src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf');
+}
+
+
+@font-face {
+  font-family: ubuntu-mono;
+  src: url('../fonts/Ubuntu/UbuntuMono-Regular.ttf');
+
+}
+
+@font-face {
+  font-family: ubuntu-bold;
+  src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf');
+}
+
+.font-fira-code {
+  font-family: fira-code;
+}
+
+.font-lora {
+  font-family: lora;
+}
+
+.font-montserrat {
+  font-family: montserrat;
+}
+
+.font-ubuntu {
+  font-family: ubuntu-regular;
+}
+
+.font-ubuntu-medium {
+  font-family: ubuntu-medium;
+}
+
+.font-ubuntu-mono {
+  font-family: ubuntu-mono;
+}
+
+.font-ubuntu-bold {
+  font-family: ubuntu-bold;
+}

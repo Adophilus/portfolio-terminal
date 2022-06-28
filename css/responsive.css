@@ -1,0 +1,9 @@
+.container {
+  width: clamp(
+    var(--width-container-min),
+    var(--width-container-ideal),
+    var(--width-container-max)
+  );
+  margin-right: auto;
+  margin-left: auto;
+}

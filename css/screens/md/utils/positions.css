@@ -1,0 +1,69 @@
+@media only screen and (min-width: 1008px) {
+  .md\:top-0 {
+    top: 0%;
+  }
+
+  .md\:bottom-0 {
+    bottom: 0%;
+  }
+
+  .md\:left-0 {
+    left: 0%;
+  }
+
+  .md\:right-0 {
+    right: 0%;
+  }
+
+  .md\:top-1\/2 {
+    top: 50%;
+  }
+
+  .md\:bottom-1\/2 {
+    bottom: 50%;
+  }
+
+  .md\:left-1\/2 {
+    left: 50%;
+  }
+
+  .md\:right-1\/2 {
+    right: 50%;
+  }
+
+  .md\:top-full {
+    top: 100%;
+  }
+
+  .md\:bottom-full {
+    bottom: 100%;
+  }
+
+  .md\:left-full {
+    left: 100%;
+  }
+
+  .md\:right-full {
+    right: 100%;
+  }
+
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:static {
+    position: static;
+  }
+
+  .md\:sticky {
+    position: sticky;
+  }
+}

@@ -1,0 +1,119 @@
+.font-300 {
+  font-weight: 300;
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-700 {
+  font-weight: 700;
+}
+
+.font-800 {
+  font-weight: 800;
+}
+
+.font-900 {
+  font-weight: 900;
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+}
+
+.text-sub-heading {
+  font-size: var(--text-sub-heading);
+}
+
+.text-large {
+  font-size: var(--text-large);
+}
+
+.text-big {
+  font-size: var(--text-big);
+}
+
+.text-normal {
+  font-size: var(--text-normal);
+}
+
+.text-default {
+  color: var(--color-text-default);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-emphasis {
+  color: var(--color-emphasis);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+
+.text-grey {
+  color: var(--color-grey);
+}
+
+.text-dark-grey {
+  color: var(--color-dark-grey);
+}
+
+.text-light-grey {
+  color: var(--color-light-grey);
+}
+
+.text-purple {
+  color: var(--color-purple);
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.select-none {
+  user-select: none;
+}

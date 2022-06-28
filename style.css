@@ -1,0 +1,206 @@
+:root {
+  --color-secondary: #282a35;
+  --color-dark-grey: #424040;
+  --color-purple: #a948ff;
+  --color-dark-purple: #351353;
+  --color-grey: #9c9c9c;
+  --color-green: #47d043;
+  --color-yellow: #fabd2f;
+  --color-red: #f5544d;
+}
+
+body {
+  /*
+  background-image: url('./imgs/profile.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
+  */
+  background-image: radial-gradient(
+    circle at center,
+    var(--color-purple),
+    #871c87,
+    var(--color-dark-purple)
+  );
+}
+
+#terminal .title-bar {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+#terminal .app-title {
+  transition: color 0.3s ease-in-out;
+}
+
+#terminal .app-title:hover {
+  color: var(--color-white);
+}
+
+#terminal .terminal-btn {
+  display: flex;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#terminal .terminal-btn:hover {
+  opacity: 1;
+}
+
+#scrollbar {
+  height: calc(100% - 4em);
+  scrollbar-color: var(--color-light-grey) transparent;
+}
+
+#scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-grey);
+  border-radius: 20px;
+}
+
+#commandSpace *::selection {
+  background-color: var(--color-light-grey);
+  color: var(--color-secondary);
+}
+
+#commandSpace .error::selection {
+  background-color: var(--color-red);
+  color: var(--color-secondary);
+}
+#commandSpace .path::selection {
+  background-color: var(--color-purple);
+  color: var(--color-secondary);
+}
+
+#commandCaret {
+  width: 0.5em;
+  background-color: var(--color-light-grey);
+}
+
+.animate-caret {
+  animation-name: caret-phase;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#credits.animate i {
+  animation-name: brighten-up-red;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#credits.animate a {
+  animation-name: brighten-up-purple;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#credits.animate #underline {
+  animation-name: brighten-up-purple-bg;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes brighten-up-red {
+  0% {
+    color: var(--color-text-default);
+  }
+
+  100% {
+    text-shadow: 1px 1px 1px var(--color-red);
+    color: var(--color-red);
+  }
+}
+
+@keyframes caret-phase {
+  0% {
+    background-color: var(--color-light-grey);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes brighten-up-purple {
+  0% {
+    color: inherit; /*var(--color-text-default);*/
+  }
+
+  100% {
+    text-shadow: 1px 1px 1px var(--color-purple);
+    color: var(--color-purple);
+  }
+}
+
+@keyframes brighten-up-purple-bg {
+  0% {
+    background-color: inherit; /*var(--color-text-default);*/
+  }
+
+  100% {
+    box-shadow: 1px 1px 1px var(--color-purple);
+    background-color: var(--color-purple);
+  }
+}
+
+/*
+@keyframes increase-decrease {
+  0% {
+    width: 0%;
+  }
+
+  15% {
+    width: 100%;
+  }
+
+  30% {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  45% {
+    width: 0%;
+  }
+
+  60% {
+    width: 100%;
+  }
+
+  75% {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  90% {
+    width: 0%;
+  }
+}
+*/
+
+@media only screen and (min-width: 1008px) {
+  #terminal {
+    /*box-shadow: 5px 5px 8px 7px rgba(0, 0, 0, 0.5);*/
+    box-shadow: 1px 9px 20px 0 rgba(0, 0, 0, 0.8);
+  }
+}
