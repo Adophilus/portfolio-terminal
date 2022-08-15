@@ -1,0 +1,59 @@
+{
+  "socials": {
+    "GitHub": {
+      "name": "GitHub",
+      "icon": "fa-brands fa-github",
+      "text": "Adophilus",
+      "link": "https://github.com/Adophilus"
+    },
+    "Mail": {
+      "name": "Mail",
+      "icon": "fa-solid fa-envelope",
+      "text": "uchenna19of@gmail.com",
+      "link": "mailto:uchenna19of@gmail.com"
+    },
+    "Twitter": {
+      "name": "Twitter",
+      "icon": "fa-brands fa-twitter",
+      "text": "@adophilus",
+      "link": "https://twitter.com/adophilus"
+    },
+    "Chess": {
+      "name": "Chess.com",
+      "icon": "fa-solid fa-chess-pawn",
+      "text": "@Adophilus",
+      "link": "https://www.chess.com/member/Adophilus"
+    },
+    "StackOverflow": {
+      "name": "StackOverflow",
+      "icon": "fa-brands fa-stack-overflow",
+      "text": "@adophilus",
+      "link": "https://stackoverflow.com/users/8554464/adophilus"
+    }
+  },
+  "services": {
+    "web-app-dev": {
+      "id": "web-app-dev",
+      "name": "Web App Development",
+      "details": "Developing high performant web apps using HTML, CSS, JS, VueJS, React and AlpineJS <i class='fa-regular fa-face-smile-beam'></i>"
+    },
+    "backend-api-dev": {
+      "id": "backend-api-dev",
+      "name": "Backend API Development",
+      "details": "Developing backend API for frontend projects using NodeJS, PHP and Python"
+    },
+    "python-scripting": {
+      "id": "python-scripting",
+      "name": "Python Scripting",
+      "details": "Automating repetitive and tedious tasks usinng Python (and other scripting languages -- like Lua)"
+    }
+  },
+  "files": {},
+  "helpDialogs": {
+    "ls": "lists out files",
+    "cat": "displays the content of a file",
+    "clear": "clears the screen",
+    "service": "displays a list of services offered",
+    "whoami": "displays information about me"
+  }
+}
