@@ -14,7 +14,7 @@ const execAsync = async (cmd, opts = {}) => {
 }
 
 const processFile = (file) => {
-  return execAsync(`scripts/format.sh "${file}"`)
+  return fs.readFile(file, 'utf8')
 }
 
 const files = await fs.readdir('files')
